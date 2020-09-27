@@ -21,5 +21,7 @@ func Init() *echo.Echo {
 
 	e.DELETE("/pegawai",controllers.DeletePegawai)
 
+	e.GET("/generate-hash/:password",controllers.GenerateHashPassword)
+	e.POST("/login",controllers.CheckLogin)
 	return e
 }
