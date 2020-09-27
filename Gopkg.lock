@@ -10,19 +10,24 @@
   version = "v3.2.0"
 
 [[projects]]
-  digest = "1:bf618941b014c2a86e4a6f39d4a26541c06fc63387fc50d4694d67eac2151f4a"
+  digest = "1:efd601ad1d1189884f37ed075fadb5bbd17f1f5acf5862827247c6da56d125ba"
   name = "github.com/labstack/echo"
-  packages = ["."]
+  packages = [
+    ".",
+    "middleware",
+  ]
   pruneopts = "UT"
   revision = "38772c686c76b501f94bd6cd5b77f5842e93b559"
   version = "v3.3.10"
 
 [[projects]]
-  digest = "1:9bc108827ac1d8783dea294f1ef07732fa4ca7d6e20518c04888a85828eba4ce"
+  digest = "1:e8e65826d60fd82637fb9df06ecd651191b599f4a8f72b86362012f288778320"
   name = "github.com/labstack/gommon"
   packages = [
+    "bytes",
     "color",
     "log",
+    "random",
   ]
   pruneopts = "UT"
   revision = "4919956f6fb227b548f004da27c7c6b20fba499f"
@@ -143,6 +148,7 @@
   input-imports = [
     "github.com/dgrijalva/jwt-go",
     "github.com/labstack/echo",
+    "github.com/labstack/echo/middleware",
     "github.com/lib/pq",
     "github.com/tkanos/gonfig",
     "golang.org/x/crypto/bcrypt",

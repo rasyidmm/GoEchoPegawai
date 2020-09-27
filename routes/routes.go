@@ -3,6 +3,7 @@ package routes
 import (
 	"github.com/labstack/echo"
 	"github.com/rasyidmm/EchoRest/controllers"
+	"github.com/rasyidmm/EchoRest/middleware"
 	"net/http"
 )
 
@@ -13,7 +14,7 @@ func Init() *echo.Echo {
 		return context.String(http.StatusOK,"Hello this is Echo")
 	})
 
-	e.GET("/pegawai",controllers.FetchAllPegawai)
+	e.GET("/pegawai",controllers.FetchAllPegawai, middleware.IsAuthenticated)
 
 	e.POST("/pegawai",controllers.StorePegawai)
 
